@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "conditional-asm-cgh"
+version = "1.0.0"
+description = "Lightweight (z, lambda)-conditioned complex-valued U-Net CGH for ASM holography"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Xirun Cheng"},
+    {name = "Yong Liu"},
+    {name = "Quan Wang"},
+    {name = "Xiang Liu"},
+    {name = "Chaofan Zhang"},
+    {name = "Zhenyu Gao"},
+]
+keywords = ["computer-generated holography", "holography", "deep learning", "ASM", "CGH"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+    "numpy>=1.24.0",
+    "opencv-python>=4.7.0",
+    "Pillow>=9.5.0",
+    "matplotlib>=3.7.0",
+    "scikit-image>=0.21.0",
+    "tqdm>=4.65.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "black", "flake8"]
+
+[project.urls]
+Homepage = "https://github.com/Arcohyp/conditonal_asm_cgh"
+Repository = "https://github.com/Arcohyp/conditonal_asm_cgh"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["conditional_asm_cgh*"]
+exclude = ["tests*", "experiments*", "eval_results*"]

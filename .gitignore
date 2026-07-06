@@ -1,0 +1,53 @@
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyTorch checkpoints and data
+*.pth
+*.pt
+*.ckpt
+experiments/
+eval_results/
+logs/
+data/
+datasets/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints
+
+# Paper outputs (keep source, ignore generated PDFs)
+*.pdf
+paper_oe/figures/*.png
+paper_oe/figures/*.pdf
+paper_assets/figures/*.png
