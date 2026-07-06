@@ -22,7 +22,7 @@ wheels/
 .installed.cfg
 *.egg
 
-# PyTorch checkpoints and data
+# PyTorch checkpoints and data (keep release weights)
 *.pth
 *.pt
 *.ckpt
@@ -51,3 +51,7 @@ Thumbs.db
 paper_oe/figures/*.png
 paper_oe/figures/*.pdf
 paper_assets/figures/*.png
+
+# Exception: keep the small release weights in weights/
+!weights/
+!weights/*.pth

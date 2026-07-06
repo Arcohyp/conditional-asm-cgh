@@ -132,7 +132,26 @@ The training and validation use the [DIV2K dataset](https://data.vision.ee.ethz.
 
 ## Trained weights
 
-Trained model weights will be released upon paper acceptance. For now, they are available from the authors upon reasonable request.
+The main model checkpoints used in the paper are provided under `weights/`:
+
+| Checkpoint | Model | Params | Description |
+|------------|-------|--------|-------------|
+| `weights/spatial_conditional.pth` | Spatial-conditional (proposed) | 44,221 | Main model; one weight for all $(z, \lambda)$ in the paper range |
+| `weights/unconditional.pth` | Unconditional ablation | 42,260 | Same backbone without parameter conditioning |
+| `weights/frequency_conditional.pth` | Frequency-conditional ablation | 85,588 | Fourier-domain radial multiplier baseline |
+
+Load them with the matching model class:
+
+```python
+from conditional_asm_cgh.models.ccnn_cgh_cond_minexp import ConditionalCCNNcghModelMinExp
+import torch
+
+model = ConditionalCCNNcghModelMinExp()
+ckpt = torch.load('weights/spatial_conditional.pth', map_location='cpu')
+model.load_state_dict(ckpt['model_state_dict'])
+```
+
+The checkpoints store both `model_state_dict` and training metadata; only `model_state_dict` is needed for inference.
 
 ## Citation
 
