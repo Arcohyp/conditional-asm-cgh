@@ -7,7 +7,7 @@ This repository accompanies the manuscript:
 > **A lightweight complex-valued U-Net CGH for joint distance–wavelength coverage of the ASM parameter plane**  
 > Xirun Cheng, Yong Liu, Quan Wang, Xiang Liu, Chaofan Zhang, Zhenyu Gao
 
-Code and trained weights will be linked to the manuscript once it is accepted for publication.
+Code and trained weights are linked to the manuscript; the repository is currently private and will be made public upon manuscript acceptance.
 
 ## Highlights
 
@@ -19,8 +19,8 @@ Code and trained weights will be linked to the manuscript once it is accepted fo
 ## Installation
 
 ```bash
-git clone https://github.com/Arcohyp/conditonal_asm_cgh.git
-cd conditonal_asm_cgh
+git clone https://github.com/Arcohyp/conditional-asm-cgh.git
+cd conditional-asm-cgh
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt

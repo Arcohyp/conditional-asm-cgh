@@ -44,8 +44,8 @@ dependencies = [
 dev = ["pytest", "black", "flake8"]
 
 [project.urls]
-Homepage = "https://github.com/Arcohyp/conditonal_asm_cgh"
-Repository = "https://github.com/Arcohyp/conditonal_asm_cgh"
+Homepage = "https://github.com/Arcohyp/conditional-asm-cgh"
+Repository = "https://github.com/Arcohyp/conditional-asm-cgh"
 
 [tool.setuptools.packages.find]
 where = ["."]
