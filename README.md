@@ -7,7 +7,7 @@ This repository accompanies the manuscript:
 > **A lightweight complex-valued U-Net CGH for joint distance–wavelength coverage of the ASM parameter plane**  
 > Xirun Cheng, Yong Liu, Quan Wang, Xiang Liu, Chaofan Zhang, Zhenyu Gao
 
-Code and trained weights are linked to the manuscript; the repository is currently private and will be made public upon manuscript acceptance.
+Code and trained weights are linked to the manuscript.
 
 ## Highlights
 
