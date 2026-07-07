@@ -5,7 +5,7 @@ A lightweight, single-weight complex-valued U-Net CGH model conditioned on propa
 This repository accompanies the manuscript:
 
 > **A lightweight complex-valued U-Net CGH for joint distance–wavelength coverage of the ASM parameter plane**  
-> Xirun Cheng, Yong Liu, Quan Wang, Xiang Liu, Chaofan Zhang, Zhenyu Gao
+> Xirun Cheng, Yong Liu, Quan Wang, Chaofan Zhang, Zhenyu Gao
 
 Code and trained weights are linked to the manuscript.
 
@@ -158,7 +158,7 @@ The checkpoints store both `model_state_dict` and training metadata; only `model
 ```bibtex
 @article{cheng2026conditional,
   title={A lightweight complex-valued U-Net CGH for joint distance--wavelength coverage of the ASM parameter plane},
-  author={Cheng, Xirun and Liu, Yong and Wang, Quan and Liu, Xiang and Zhang, Chaofan and Gao, Zhenyu},
+  author={Cheng, Xirun and Liu, Yong and Wang, Quan and Zhang, Chaofan and Gao, Zhenyu},
   year={2026},
   note={Manuscript under review}
 }
