@@ -5,7 +5,7 @@ A lightweight, single-weight complex-valued U-Net CGH model conditioned on propa
 This repository accompanies the manuscript:
 
 > **A lightweight complex-valued U-Net CGH for joint distance–wavelength coverage of the ASM parameter plane**  
-> Xirun Cheng, Yong Liu, Quan Wang, Chaofan Zhang, Zhenyu Gao
+> Xirun Cheng, Yong Liu, Dapeng Sun, Quan Wang, Chaofan Zhang, Zhenyu Gao
 
 Code and trained weights are linked to the manuscript.
 
@@ -15,6 +15,27 @@ Code and trained weights are linked to the manuscript.
 - **44k parameters**, 0.20 MB checkpoint, 8-bit phase quantization compatible.
 - Three ablation models: unconditional, spatial-conditional (proposed), frequency-conditional.
 - 4K DIV2K validation; PSNR/SSIM evaluation, engineering benchmark, and figure generation scripts included.
+
+## First revision (September 2026)
+
+The revised manuscript reports re-measured results under a unified protocol. The
+supporting checkpoints and scripts are included in this repository:
+
+- **3-seed ablation checkpoints** (`weights/m3_seeds/`): all three ablation models
+  retrained from seeds 42/43/44 with the identical full recipe (continuous wavelength
+  sampling plus two-axis peak anchoring). Revised Tables 3–4 and Figs. 4–5 report
+  mean $\pm$ std over these seeds. Under the unified recipe the frequency-conditional
+  and spatial-conditional models are statistically tied; the spatial-conditional form
+  reaches the same coverage at roughly half the parameters (44,221 vs 85,588).
+- **SFO-window model** (`weights/sfo_window_spatial.pth`): the spatial-conditional
+  model trained on the SFO baseline's own operating window (pitch 3.74 µm,
+  450/520/638 nm, $z\in[85,115]$ mm). On SFO's intensity-domain evaluation
+  convention it scores 27.08 dB PSNR / 0.764 SSIM against the released SFO
+  weights' 33.12 dB / 0.883 on the same 100 DIV2K images (Table 5, Fig. 6).
+- **Revision experiment scripts** (`scripts/revision/`): seed retraining, full
+  evaluation suite, extrapolation scans beyond the training window (safe envelope
+  $z\in[125,265]$ mm for the blue channel), the SFO comparison, and the RGB
+  composite rendering.
 
 ## Installation
 
@@ -139,6 +160,10 @@ The main model checkpoints used in the paper are provided under `weights/`:
 | `weights/spatial_conditional.pth` | Spatial-conditional (proposed) | 44,221 | Main model; one weight for all $(z, \lambda)$ in the paper range |
 | `weights/unconditional.pth` | Unconditional ablation | 42,260 | Same backbone without parameter conditioning |
 | `weights/frequency_conditional.pth` | Frequency-conditional ablation | 85,588 | Fourier-domain radial multiplier baseline |
+| `weights/m3_seeds/spatial_s{42,43,44}.pth` | Spatial-conditional | 44,221 | 3-seed unified-recipe retraining (revision Tables 3–4, Figs. 4–5) |
+| `weights/m3_seeds/frequency_s{42,43,44}.pth` | Frequency-conditional | 85,588 | 3-seed unified-recipe retraining (revision Tables 3–4, Figs. 4–5) |
+| `weights/m3_seeds/unconditional_s{42,43,44}.pth` | Unconditional | 42,260 | 3-seed unified-recipe retraining (revision Tables 3–4, Figs. 4–5) |
+| `weights/sfo_window_spatial.pth` | Spatial-conditional (SFO window) | 44,221 | Trained on SFO's operating window (pitch 3.74 µm, $z\in[85,115]$ mm) for the revision head-to-head comparison (Table 5, Fig. 6) |
 
 Load them with the matching model class:
 
@@ -158,7 +183,7 @@ The checkpoints store both `model_state_dict` and training metadata; only `model
 ```bibtex
 @article{cheng2026conditional,
   title={A lightweight complex-valued U-Net CGH for joint distance--wavelength coverage of the ASM parameter plane},
-  author={Cheng, Xirun and Liu, Yong and Wang, Quan and Zhang, Chaofan and Gao, Zhenyu},
+  author={Cheng, Xirun and Liu, Yong and Sun, Dapeng and Wang, Quan and Zhang, Chaofan and Gao, Zhenyu},
   year={2026},
   note={Manuscript under review}
 }
