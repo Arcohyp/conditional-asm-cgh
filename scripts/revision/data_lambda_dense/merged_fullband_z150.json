@@ -1,0 +1,847 @@
+{
+ "fullband_lambda_scan_z150": {
+  "description": "Single spatial-conditional weight (rev_m3_spatial_s42) at z=150mm, pitch 3.6um, 100 DIV2K validation images per point. Dense 2nm scan 410-680nm (2026-09-10, run_m4b_lambda_dense.sh) + 1nm finescan in the three native-line windows (M3) + original 6 out-of-band probe points (M4). psnr_mean per point; SSIM in ssim_mean.",
+  "points": [
+   {
+    "wavelength_um": 410.0,
+    "psnr_mean": 29.35228663014251,
+    "ssim_mean": 0.7845344668626786
+   },
+   {
+    "wavelength_um": 412.0,
+    "psnr_mean": 28.889885272939704,
+    "ssim_mean": 0.7653311055898666
+   },
+   {
+    "wavelength_um": 414.0,
+    "psnr_mean": 28.683303294246517,
+    "ssim_mean": 0.7487368938326836
+   },
+   {
+    "wavelength_um": 416.0,
+    "psnr_mean": 28.52187808670396,
+    "ssim_mean": 0.7498547405004501
+   },
+   {
+    "wavelength_um": 418.0,
+    "psnr_mean": 29.309700752247778,
+    "ssim_mean": 0.7932223650813103
+   },
+   {
+    "wavelength_um": 420.0,
+    "psnr_mean": 28.959926234076335,
+    "ssim_mean": 0.7708514386415481
+   },
+   {
+    "wavelength_um": 422.0,
+    "psnr_mean": 28.755343537361128,
+    "ssim_mean": 0.741008121073246
+   },
+   {
+    "wavelength_um": 424.0,
+    "psnr_mean": 28.52079277100401,
+    "ssim_mean": 0.77489427536726
+   },
+   {
+    "wavelength_um": 425.0,
+    "psnr_mean": 27.194473276576847,
+    "ssim_mean": 0.6896918621659279
+   },
+   {
+    "wavelength_um": 426.0,
+    "psnr_mean": 28.96782246154877,
+    "ssim_mean": 0.776990455687046
+   },
+   {
+    "wavelength_um": 428.0,
+    "psnr_mean": 27.8953915501642,
+    "ssim_mean": 0.726034414768219
+   },
+   {
+    "wavelength_um": 430.0,
+    "psnr_mean": 27.243521565257147,
+    "ssim_mean": 0.6887555640935897
+   },
+   {
+    "wavelength_um": 432.0,
+    "psnr_mean": 28.407661369385067,
+    "ssim_mean": 0.730667510330677
+   },
+   {
+    "wavelength_um": 434.0,
+    "psnr_mean": 28.75603653711799,
+    "ssim_mean": 0.807052248120308
+   },
+   {
+    "wavelength_um": 436.0,
+    "psnr_mean": 28.95398111741257,
+    "ssim_mean": 0.7799648642539978
+   },
+   {
+    "wavelength_um": 438.0,
+    "psnr_mean": 29.16413584849422,
+    "ssim_mean": 0.7771207198500634
+   },
+   {
+    "wavelength_um": 440.0,
+    "psnr_mean": 28.83533406826179,
+    "ssim_mean": 0.7893200960755348
+   },
+   {
+    "wavelength_um": 441.0,
+    "psnr_mean": 28.337860483313275,
+    "ssim_mean": 0.7578484544157982
+   },
+   {
+    "wavelength_um": 442.0,
+    "psnr_mean": 32.31567710850435,
+    "ssim_mean": 0.8876377236843109
+   },
+   {
+    "wavelength_um": 443.0,
+    "psnr_mean": 32.024136658605606,
+    "ssim_mean": 0.8708684706687927
+   },
+   {
+    "wavelength_um": 444.0,
+    "psnr_mean": 28.913778602131337,
+    "ssim_mean": 0.7692796999216079
+   },
+   {
+    "wavelength_um": 445.0,
+    "psnr_mean": 29.590669171596943,
+    "ssim_mean": 0.8196798527240753
+   },
+   {
+    "wavelength_um": 446.0,
+    "psnr_mean": 29.748450657484927,
+    "ssim_mean": 0.8175360867381096
+   },
+   {
+    "wavelength_um": 447.0,
+    "psnr_mean": 32.155397626717985,
+    "ssim_mean": 0.8803732144832611
+   },
+   {
+    "wavelength_um": 448.0,
+    "psnr_mean": 30.119452557334302,
+    "ssim_mean": 0.8091154712438583
+   },
+   {
+    "wavelength_um": 449.0,
+    "psnr_mean": 28.84843103311035,
+    "ssim_mean": 0.7654387587308884
+   },
+   {
+    "wavelength_um": 450.0,
+    "psnr_mean": 29.592819781285417,
+    "ssim_mean": 0.8216561824083328
+   },
+   {
+    "wavelength_um": 451.0,
+    "psnr_mean": 29.286530352182808,
+    "ssim_mean": 0.7816076016426087
+   },
+   {
+    "wavelength_um": 452.0,
+    "psnr_mean": 29.674955234345155,
+    "ssim_mean": 0.8014033323526383
+   },
+   {
+    "wavelength_um": 453.0,
+    "psnr_mean": 28.166578291946394,
+    "ssim_mean": 0.7377633288502693
+   },
+   {
+    "wavelength_um": 454.0,
+    "psnr_mean": 32.13951326619176,
+    "ssim_mean": 0.8828337413072586
+   },
+   {
+    "wavelength_um": 455.0,
+    "psnr_mean": 29.32586595598566,
+    "ssim_mean": 0.8154769173264503
+   },
+   {
+    "wavelength_um": 456.0,
+    "psnr_mean": 30.181520499901172,
+    "ssim_mean": 0.8291515451669693
+   },
+   {
+    "wavelength_um": 457.0,
+    "psnr_mean": 29.10701309519559,
+    "ssim_mean": 0.8182632452249528
+   },
+   {
+    "wavelength_um": 458.0,
+    "psnr_mean": 28.429707850453948,
+    "ssim_mean": 0.7847892048954964
+   },
+   {
+    "wavelength_um": 459.0,
+    "psnr_mean": 29.946772801161437,
+    "ssim_mean": 0.8108849990367889
+   },
+   {
+    "wavelength_um": 460.0,
+    "psnr_mean": 28.324217062597757,
+    "ssim_mean": 0.7830946803092956
+   },
+   {
+    "wavelength_um": 462.0,
+    "psnr_mean": 28.79867240766007,
+    "ssim_mean": 0.7920094189047814
+   },
+   {
+    "wavelength_um": 464.0,
+    "psnr_mean": 29.532318560416947,
+    "ssim_mean": 0.8236898663640022
+   },
+   {
+    "wavelength_um": 466.0,
+    "psnr_mean": 30.895751460174118,
+    "ssim_mean": 0.8387734186649323
+   },
+   {
+    "wavelength_um": 468.0,
+    "psnr_mean": 28.023919839473606,
+    "ssim_mean": 0.7445671045780182
+   },
+   {
+    "wavelength_um": 470.0,
+    "psnr_mean": 27.470698058778474,
+    "ssim_mean": 0.7629540902376175
+   },
+   {
+    "wavelength_um": 472.0,
+    "psnr_mean": 29.11079698113501,
+    "ssim_mean": 0.8198598873615265
+   },
+   {
+    "wavelength_um": 474.0,
+    "psnr_mean": 29.108467769707726,
+    "ssim_mean": 0.8062149739265442
+   },
+   {
+    "wavelength_um": 476.0,
+    "psnr_mean": 27.977851600261218,
+    "ssim_mean": 0.8007202661037445
+   },
+   {
+    "wavelength_um": 478.0,
+    "psnr_mean": 32.33844259837721,
+    "ssim_mean": 0.9026712757349015
+   },
+   {
+    "wavelength_um": 480.0,
+    "psnr_mean": 28.663168911954802,
+    "ssim_mean": 0.8364905440807342
+   },
+   {
+    "wavelength_um": 482.0,
+    "psnr_mean": 29.269245241223025,
+    "ssim_mean": 0.8251260191202163
+   },
+   {
+    "wavelength_um": 484.0,
+    "psnr_mean": 30.36703429643093,
+    "ssim_mean": 0.8477195513248443
+   },
+   {
+    "wavelength_um": 486.0,
+    "psnr_mean": 29.147375615846435,
+    "ssim_mean": 0.8416886872053146
+   },
+   {
+    "wavelength_um": 488.0,
+    "psnr_mean": 27.62983961500085,
+    "ssim_mean": 0.7712671285867692
+   },
+   {
+    "wavelength_um": 490.0,
+    "psnr_mean": 32.2081587289144,
+    "ssim_mean": 0.889498496055603
+   },
+   {
+    "wavelength_um": 492.0,
+    "psnr_mean": 28.047193527439802,
+    "ssim_mean": 0.7816600996255875
+   },
+   {
+    "wavelength_um": 494.0,
+    "psnr_mean": 29.30807627505038,
+    "ssim_mean": 0.8069668614864349
+   },
+   {
+    "wavelength_um": 496.0,
+    "psnr_mean": 29.931783739472976,
+    "ssim_mean": 0.8548829483985901
+   },
+   {
+    "wavelength_um": 498.0,
+    "psnr_mean": 28.240218736649698,
+    "ssim_mean": 0.7686970549821853
+   },
+   {
+    "wavelength_um": 500.0,
+    "psnr_mean": 28.896779596512797,
+    "ssim_mean": 0.8548458087444305
+   },
+   {
+    "wavelength_um": 502.0,
+    "psnr_mean": 28.947650771560994,
+    "ssim_mean": 0.7929183387756348
+   },
+   {
+    "wavelength_um": 504.0,
+    "psnr_mean": 27.61314108721656,
+    "ssim_mean": 0.7857093268632889
+   },
+   {
+    "wavelength_um": 506.0,
+    "psnr_mean": 29.173606154034047,
+    "ssim_mean": 0.8208946812152863
+   },
+   {
+    "wavelength_um": 508.0,
+    "psnr_mean": 28.90103437349683,
+    "ssim_mean": 0.8352703505754471
+   },
+   {
+    "wavelength_um": 510.0,
+    "psnr_mean": 30.17439309790372,
+    "ssim_mean": 0.8670405423641205
+   },
+   {
+    "wavelength_um": 512.0,
+    "psnr_mean": 29.693926283343412,
+    "ssim_mean": 0.8353508329391479
+   },
+   {
+    "wavelength_um": 514.0,
+    "psnr_mean": 28.94045151954025,
+    "ssim_mean": 0.7973375380039215
+   },
+   {
+    "wavelength_um": 516.0,
+    "psnr_mean": 29.77800895424431,
+    "ssim_mean": 0.8541344261169433
+   },
+   {
+    "wavelength_um": 518.0,
+    "psnr_mean": 28.160093419166063,
+    "ssim_mean": 0.783010960817337
+   },
+   {
+    "wavelength_um": 520.0,
+    "psnr_mean": 31.671585294385732,
+    "ssim_mean": 0.9013583606481552
+   },
+   {
+    "wavelength_um": 522.0,
+    "psnr_mean": 29.802680940551735,
+    "ssim_mean": 0.8593785089254379
+   },
+   {
+    "wavelength_um": 523.0,
+    "psnr_mean": 30.05488151502881,
+    "ssim_mean": 0.8607315987348556
+   },
+   {
+    "wavelength_um": 524.0,
+    "psnr_mean": 31.94118472917701,
+    "ssim_mean": 0.9058496159315109
+   },
+   {
+    "wavelength_um": 525.0,
+    "psnr_mean": 28.19699904569397,
+    "ssim_mean": 0.7870442587137222
+   },
+   {
+    "wavelength_um": 526.0,
+    "psnr_mean": 29.14443339715228,
+    "ssim_mean": 0.8310221242904663
+   },
+   {
+    "wavelength_um": 527.0,
+    "psnr_mean": 29.16953017664676,
+    "ssim_mean": 0.854292995929718
+   },
+   {
+    "wavelength_um": 528.0,
+    "psnr_mean": 29.672075197623386,
+    "ssim_mean": 0.8494528609514237
+   },
+   {
+    "wavelength_um": 529.0,
+    "psnr_mean": 29.915343447455815,
+    "ssim_mean": 0.8596300840377807
+   },
+   {
+    "wavelength_um": 530.0,
+    "psnr_mean": 29.89927387731469,
+    "ssim_mean": 0.8590873980522156
+   },
+   {
+    "wavelength_um": 531.0,
+    "psnr_mean": 29.709570240118154,
+    "ssim_mean": 0.8545587414503097
+   },
+   {
+    "wavelength_um": 532.0,
+    "psnr_mean": 29.627190668228177,
+    "ssim_mean": 0.8500488519668579
+   },
+   {
+    "wavelength_um": 533.0,
+    "psnr_mean": 29.989360867188406,
+    "ssim_mean": 0.859043345451355
+   },
+   {
+    "wavelength_um": 534.0,
+    "psnr_mean": 29.971820640964552,
+    "ssim_mean": 0.8600872194766999
+   },
+   {
+    "wavelength_um": 535.0,
+    "psnr_mean": 29.260339900421616,
+    "ssim_mean": 0.8199555617570877
+   },
+   {
+    "wavelength_um": 536.0,
+    "psnr_mean": 29.237418768953955,
+    "ssim_mean": 0.8197437143325805
+   },
+   {
+    "wavelength_um": 537.0,
+    "psnr_mean": 29.490764350212906,
+    "ssim_mean": 0.853295332789421
+   },
+   {
+    "wavelength_um": 538.0,
+    "psnr_mean": 30.448541185110074,
+    "ssim_mean": 0.8595166093111039
+   },
+   {
+    "wavelength_um": 539.0,
+    "psnr_mean": 29.058403120209814,
+    "ssim_mean": 0.8595039945840836
+   },
+   {
+    "wavelength_um": 540.0,
+    "psnr_mean": 29.652936004143427,
+    "ssim_mean": 0.832688050866127
+   },
+   {
+    "wavelength_um": 541.0,
+    "psnr_mean": 29.511432387561854,
+    "ssim_mean": 0.8534574872255325
+   },
+   {
+    "wavelength_um": 542.0,
+    "psnr_mean": 29.758154483146075,
+    "ssim_mean": 0.8467661851644516
+   },
+   {
+    "wavelength_um": 544.0,
+    "psnr_mean": 28.258202546695045,
+    "ssim_mean": 0.7973087012767792
+   },
+   {
+    "wavelength_um": 546.0,
+    "psnr_mean": 28.728605272686245,
+    "ssim_mean": 0.8076352596282959
+   },
+   {
+    "wavelength_um": 548.0,
+    "psnr_mean": 29.871000102354742,
+    "ssim_mean": 0.864979367852211
+   },
+   {
+    "wavelength_um": 550.0,
+    "psnr_mean": 28.39628190050064,
+    "ssim_mean": 0.8008762329816819
+   },
+   {
+    "wavelength_um": 552.0,
+    "psnr_mean": 29.059500708580558,
+    "ssim_mean": 0.861595195531845
+   },
+   {
+    "wavelength_um": 554.0,
+    "psnr_mean": 29.06928495491254,
+    "ssim_mean": 0.8632719022035599
+   },
+   {
+    "wavelength_um": 556.0,
+    "psnr_mean": 27.512770087751992,
+    "ssim_mean": 0.7752945882081985
+   },
+   {
+    "wavelength_um": 558.0,
+    "psnr_mean": 27.996837059844026,
+    "ssim_mean": 0.7867110598087311
+   },
+   {
+    "wavelength_um": 560.0,
+    "psnr_mean": 29.095851892974196,
+    "ssim_mean": 0.8544176101684571
+   },
+   {
+    "wavelength_um": 562.0,
+    "psnr_mean": 28.538377680685517,
+    "ssim_mean": 0.8319289350509643
+   },
+   {
+    "wavelength_um": 564.0,
+    "psnr_mean": 31.85965110488873,
+    "ssim_mean": 0.8903737169504166
+   },
+   {
+    "wavelength_um": 566.0,
+    "psnr_mean": 29.88278557370244,
+    "ssim_mean": 0.8730829548835755
+   },
+   {
+    "wavelength_um": 568.0,
+    "psnr_mean": 32.29738817553908,
+    "ssim_mean": 0.9128416711091996
+   },
+   {
+    "wavelength_um": 570.0,
+    "psnr_mean": 29.98829813115583,
+    "ssim_mean": 0.8672776848077774
+   },
+   {
+    "wavelength_um": 572.0,
+    "psnr_mean": 29.712687531987672,
+    "ssim_mean": 0.8474720185995102
+   },
+   {
+    "wavelength_um": 574.0,
+    "psnr_mean": 27.84232635908688,
+    "ssim_mean": 0.8217848551273346
+   },
+   {
+    "wavelength_um": 576.0,
+    "psnr_mean": 29.988365918929798,
+    "ssim_mean": 0.879931607246399
+   },
+   {
+    "wavelength_um": 578.0,
+    "psnr_mean": 30.499325807289534,
+    "ssim_mean": 0.8905407559871673
+   },
+   {
+    "wavelength_um": 580.0,
+    "psnr_mean": 29.13502804346168,
+    "ssim_mean": 0.8399669575691223
+   },
+   {
+    "wavelength_um": 582.0,
+    "psnr_mean": 28.609869437173312,
+    "ssim_mean": 0.8401832753419876
+   },
+   {
+    "wavelength_um": 584.0,
+    "psnr_mean": 29.372010734254353,
+    "ssim_mean": 0.8558866393566131
+   },
+   {
+    "wavelength_um": 586.0,
+    "psnr_mean": 29.111197487572475,
+    "ssim_mean": 0.8403921413421631
+   },
+   {
+    "wavelength_um": 588.0,
+    "psnr_mean": 27.956434614039186,
+    "ssim_mean": 0.8315634143352508
+   },
+   {
+    "wavelength_um": 590.0,
+    "psnr_mean": 28.46160331324436,
+    "ssim_mean": 0.8169899910688401
+   },
+   {
+    "wavelength_um": 592.0,
+    "psnr_mean": 30.334056564467474,
+    "ssim_mean": 0.8695899158716202
+   },
+   {
+    "wavelength_um": 594.0,
+    "psnr_mean": 29.110805456111542,
+    "ssim_mean": 0.8285768640041351
+   },
+   {
+    "wavelength_um": 596.0,
+    "psnr_mean": 29.319865156059738,
+    "ssim_mean": 0.8421659904718399
+   },
+   {
+    "wavelength_um": 598.0,
+    "psnr_mean": 29.02141844195664,
+    "ssim_mean": 0.8602223140001297
+   },
+   {
+    "wavelength_um": 600.0,
+    "psnr_mean": 28.641342458969497,
+    "ssim_mean": 0.8684512740373611
+   },
+   {
+    "wavelength_um": 602.0,
+    "psnr_mean": 30.570851724111385,
+    "ssim_mean": 0.8722239106893539
+   },
+   {
+    "wavelength_um": 604.0,
+    "psnr_mean": 30.30482034780566,
+    "ssim_mean": 0.866318638920784
+   },
+   {
+    "wavelength_um": 606.0,
+    "psnr_mean": 29.603952796698206,
+    "ssim_mean": 0.8514921712875366
+   },
+   {
+    "wavelength_um": 608.0,
+    "psnr_mean": 31.85656186142649,
+    "ssim_mean": 0.9091709595918656
+   },
+   {
+    "wavelength_um": 610.0,
+    "psnr_mean": 29.760986916101878,
+    "ssim_mean": 0.8723118895292282
+   },
+   {
+    "wavelength_um": 612.0,
+    "psnr_mean": 27.9693228776309,
+    "ssim_mean": 0.8378387850522995
+   },
+   {
+    "wavelength_um": 614.0,
+    "psnr_mean": 29.68411037909094,
+    "ssim_mean": 0.8727172100543976
+   },
+   {
+    "wavelength_um": 616.0,
+    "psnr_mean": 32.01034470157897,
+    "ssim_mean": 0.9104386442899703
+   },
+   {
+    "wavelength_um": 618.0,
+    "psnr_mean": 31.799752020910493,
+    "ssim_mean": 0.8981347119808197
+   },
+   {
+    "wavelength_um": 620.0,
+    "psnr_mean": 31.884509227681416,
+    "ssim_mean": 0.9086528760194779
+   },
+   {
+    "wavelength_um": 622.0,
+    "psnr_mean": 30.71688809463197,
+    "ssim_mean": 0.8960398256778717
+   },
+   {
+    "wavelength_um": 624.0,
+    "psnr_mean": 28.67985769740617,
+    "ssim_mean": 0.8517115086317062
+   },
+   {
+    "wavelength_um": 626.0,
+    "psnr_mean": 29.388420121207513,
+    "ssim_mean": 0.8652652764320373
+   },
+   {
+    "wavelength_um": 628.0,
+    "psnr_mean": 31.896728286508015,
+    "ssim_mean": 0.9096880519390106
+   },
+   {
+    "wavelength_um": 629.0,
+    "psnr_mean": 29.60047436779696,
+    "ssim_mean": 0.8556819379329681
+   },
+   {
+    "wavelength_um": 630.0,
+    "psnr_mean": 29.393368231915,
+    "ssim_mean": 0.83956487596035
+   },
+   {
+    "wavelength_um": 631.0,
+    "psnr_mean": 28.218410650698658,
+    "ssim_mean": 0.836777936220169
+   },
+   {
+    "wavelength_um": 632.0,
+    "psnr_mean": 29.48816946296521,
+    "ssim_mean": 0.8470656442642212
+   },
+   {
+    "wavelength_um": 633.0,
+    "psnr_mean": 29.08011958485684,
+    "ssim_mean": 0.8338204520940781
+   },
+   {
+    "wavelength_um": 634.0,
+    "psnr_mean": 27.698029162355716,
+    "ssim_mean": 0.8197635775804519
+   },
+   {
+    "wavelength_um": 635.0,
+    "psnr_mean": 31.764573406944788,
+    "ssim_mean": 0.9052197045087814
+   },
+   {
+    "wavelength_um": 636.0,
+    "psnr_mean": 28.038559952767088,
+    "ssim_mean": 0.8240270286798477
+   },
+   {
+    "wavelength_um": 637.0,
+    "psnr_mean": 29.023524591551038,
+    "ssim_mean": 0.8323725318908691
+   },
+   {
+    "wavelength_um": 638.0,
+    "psnr_mean": 29.04623772954274,
+    "ssim_mean": 0.8369111633300781
+   },
+   {
+    "wavelength_um": 639.0,
+    "psnr_mean": 29.33057727049023,
+    "ssim_mean": 0.8420353692770004
+   },
+   {
+    "wavelength_um": 640.0,
+    "psnr_mean": 28.785011473310256,
+    "ssim_mean": 0.8749694705009461
+   },
+   {
+    "wavelength_um": 641.0,
+    "psnr_mean": 29.9521342411429,
+    "ssim_mean": 0.8752024286985397
+   },
+   {
+    "wavelength_um": 642.0,
+    "psnr_mean": 29.292049475220406,
+    "ssim_mean": 0.8550573587417603
+   },
+   {
+    "wavelength_um": 643.0,
+    "psnr_mean": 31.687245943291522,
+    "ssim_mean": 0.9058524399995804
+   },
+   {
+    "wavelength_um": 644.0,
+    "psnr_mean": 28.992965606041658,
+    "ssim_mean": 0.8337932473421097
+   },
+   {
+    "wavelength_um": 645.0,
+    "psnr_mean": 28.82494080949517,
+    "ssim_mean": 0.8673305958509445
+   },
+   {
+    "wavelength_um": 646.0,
+    "psnr_mean": 28.87704026479006,
+    "ssim_mean": 0.8421135932207108
+   },
+   {
+    "wavelength_um": 647.0,
+    "psnr_mean": 29.210730597274168,
+    "ssim_mean": 0.839369255900383
+   },
+   {
+    "wavelength_um": 648.0,
+    "psnr_mean": 31.67198944850526,
+    "ssim_mean": 0.9048019361495971
+   },
+   {
+    "wavelength_um": 650.0,
+    "psnr_mean": 29.286235086369032,
+    "ssim_mean": 0.839046117067337
+   },
+   {
+    "wavelength_um": 652.0,
+    "psnr_mean": 29.94829096881694,
+    "ssim_mean": 0.8746933430433274
+   },
+   {
+    "wavelength_um": 654.0,
+    "psnr_mean": 28.486229210957735,
+    "ssim_mean": 0.8211151993274689
+   },
+   {
+    "wavelength_um": 656.0,
+    "psnr_mean": 31.297889911953867,
+    "ssim_mean": 0.9025214785337448
+   },
+   {
+    "wavelength_um": 658.0,
+    "psnr_mean": 31.544117696872814,
+    "ssim_mean": 0.9049735546112061
+   },
+   {
+    "wavelength_um": 660.0,
+    "psnr_mean": 28.696408045624597,
+    "ssim_mean": 0.8325763440132141
+   },
+   {
+    "wavelength_um": 662.0,
+    "psnr_mean": 28.87770075605753,
+    "ssim_mean": 0.8644602268934249
+   },
+   {
+    "wavelength_um": 664.0,
+    "psnr_mean": 29.543281317382167,
+    "ssim_mean": 0.8704793226718902
+   },
+   {
+    "wavelength_um": 665.0,
+    "psnr_mean": 28.564100370000816,
+    "ssim_mean": 0.8482086390256882
+   },
+   {
+    "wavelength_um": 666.0,
+    "psnr_mean": 29.09796839846943,
+    "ssim_mean": 0.835937529206276
+   },
+   {
+    "wavelength_um": 668.0,
+    "psnr_mean": 29.47405600668396,
+    "ssim_mean": 0.8652204340696334
+   },
+   {
+    "wavelength_um": 670.0,
+    "psnr_mean": 28.57245960888746,
+    "ssim_mean": 0.8556703811883927
+   },
+   {
+    "wavelength_um": 672.0,
+    "psnr_mean": 28.373515474292404,
+    "ssim_mean": 0.8279763805866241
+   },
+   {
+    "wavelength_um": 674.0,
+    "psnr_mean": 27.66530944319009,
+    "ssim_mean": 0.8312433242797852
+   },
+   {
+    "wavelength_um": 676.0,
+    "psnr_mean": 31.519056174638425,
+    "ssim_mean": 0.903339826464653
+   },
+   {
+    "wavelength_um": 678.0,
+    "psnr_mean": 27.720485065580178,
+    "ssim_mean": 0.8323430776596069
+   },
+   {
+    "wavelength_um": 680.0,
+    "psnr_mean": 29.485303549368453,
+    "ssim_mean": 0.8501392483711243
+   }
+  ]
+ }
+}

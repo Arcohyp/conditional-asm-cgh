@@ -11,6 +11,7 @@ to be adapted for other machines.
 | `run_m3_evals.sh` | Full evaluation suite of the M3 models: 61-point distance scan per color + 63-point wavelength fine scan, 100 DIV2K images per point | Tables 3, 4; Figs. 4, 5 |
 | `compute_m3_stats.py` | Aggregate the M3 eval JSONs into mean $\pm$ std statistics | Tables 3, 4 |
 | `run_m4.sh` | Extrapolation scans with a single trained weight: distance axis 85--265 mm, wavelength axis beyond the 440--650 nm training band | Sec. 4.5, Fig. 9 |
+| `run_m4b_lambda_dense.sh` | Dense full-band wavelength scan at z = 150 mm (410--680 nm, 2 nm steps, 3 GPUs by wavelength range) that fills the gaps of the M3 finescan; merged per-point results in `data_lambda_dense/` | Fig. 9(b), Sec. 4.5 |
 | `run_m2.sh`, `run_m2b.sh`, `run_m2c.sh`, `run_m2d.sh` | Progressive training of the spatial-conditional model on the SFO operating window (pitch 3.74 um, 450/520/638 nm, z in [85,115] mm) for the head-to-head comparison | Sec. 4.3, Table 5, Fig. 6 |
 | `eval_ours_m2.py` | Evaluate our SFO-window model per cell in both evaluation conventions (SFO intensity-domain skimage and our amplitude-domain) | Table 5, Fig. 6 |
 | `eval_sfo_psnr_ssim.py` | Re-evaluate the released SFO weights with SFO's own convention on the same 100 DIV2K images | Table 5, Fig. 6 |
