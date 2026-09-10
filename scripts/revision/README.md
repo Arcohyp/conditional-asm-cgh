@@ -14,6 +14,10 @@ to be adapted for other machines.
 | `run_m2.sh`, `run_m2b.sh`, `run_m2c.sh`, `run_m2d.sh` | Progressive training of the spatial-conditional model on the SFO operating window (pitch 3.74 um, 450/520/638 nm, z in [85,115] mm) for the head-to-head comparison | Sec. 4.3, Table 5, Fig. 6 |
 | `eval_ours_m2.py` | Evaluate our SFO-window model per cell in both evaluation conventions (SFO intensity-domain skimage and our amplitude-domain) | Table 5, Fig. 6 |
 | `eval_sfo_psnr_ssim.py` | Re-evaluate the released SFO weights with SFO's own convention on the same 100 DIV2K images | Table 5, Fig. 6 |
+| `eval_table5_amp.py` | Amplitude-domain fixed-peak PSNR/SSIM (no per-image scaling) for both models on the shared window; per-color results in `data_table5/` | Table 5 (amplitude-convention column) |
+| `verify_sfo_scale.py` | Measure SFO's per-image sum-recovery scale at z = 100 mm (evidence that the released SFO field is not absolutely calibrated) | Sec. 4.3 |
+| `verify_sfo_global_cal.py` | Least-squares single global amplitude constant for SFO; restores its fixed-peak score from 13.8 to 31.3 dB (calibration offset carries no pattern-quality information) | Sec. 4.3, Table 5 note |
+| `explore_sfo_extrapolation/` | Scan the released SFO weights over z = 40--200 mm (5 mm steps + 1 mm dense across the window transitions); scripts, per-cell JSONs, and summary plot. The mean/min--max band over the three per-color weights is the gray band of Fig. 9(a) | Fig. 9(a), Sec. 4.5 |
 | `scan_comb_m2.py` | Per-image comb scans used for the per-image statistics | Sec. 4.3 |
 | `make_rgb_composite.py` | Render the per-channel reconstructions and composite them into a full-color RGB image at off-peak distances (main model @ z = 198 mm; SFO-window model @ z = 113 mm) | Sec. 4.6, Fig. 12 |
 | `make_m2_figure.py` | Bar-chart figure of the per-cell SFO comparison | Fig. 6 |

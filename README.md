@@ -34,8 +34,9 @@ supporting checkpoints and scripts are included in this repository:
   weights' 33.12 dB / 0.883 on the same 100 DIV2K images (Table 5, Fig. 6).
 - **Revision experiment scripts** (`scripts/revision/`): seed retraining, full
   evaluation suite, extrapolation scans beyond the training window (safe envelope
-  $z\in[125,265]$ mm for the blue channel), the SFO comparison, and the RGB
-  composite rendering.
+  $z\in[125,265]$ mm for the blue channel), the SFO comparison (including the
+  amplitude-convention evaluation of Table 5 and the out-of-window SFO scan
+  behind Fig. 9(a)), and the RGB composite rendering.
 
 ## Installation
 
