@@ -40,16 +40,16 @@ def roll_torch(tensor, shift, axis):
 def ifftshift(tensor):
     """ifftshift for tensors of shape [..., H, W, 2]."""
     size = tensor.size()
-    tensor_shifted = roll_torch(tensor, -math.floor(size[-3] / 2.0), dim=-3)
-    tensor_shifted = roll_torch(tensor_shifted, -math.floor(size[-2] / 2.0), dim=-2)
+    tensor_shifted = roll_torch(tensor, -math.floor(size[-3] / 2.0), axis=-3)
+    tensor_shifted = roll_torch(tensor_shifted, -math.floor(size[-2] / 2.0), axis=-2)
     return tensor_shifted
 
 
 def fftshift(tensor):
     """fftshift for tensors of shape [..., H, W, 2]."""
     size = tensor.size()
-    tensor_shifted = roll_torch(tensor, math.floor(size[-3] / 2.0), dim=-3)
-    tensor_shifted = roll_torch(tensor_shifted, math.floor(size[-2] / 2.0), dim=-2)
+    tensor_shifted = roll_torch(tensor, math.floor(size[-3] / 2.0), axis=-3)
+    tensor_shifted = roll_torch(tensor_shifted, math.floor(size[-2] / 2.0), axis=-2)
     return tensor_shifted
 
 
