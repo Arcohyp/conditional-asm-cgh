@@ -150,17 +150,54 @@ def _finalize_H(H_stacked, shift_mode):
     return torch.view_as_complex(H_stacked)
 
 
+# ---------------------------------------------------------------------------
+# Optional global switch: drop the two circular shifts.
+#
+# Multiplication by a fixed transfer function is a *circular* convolution, and
+# circular convolution commutes with circular shift.  Therefore
+#
+#     fftshift(ifft(fft(ifftshift(u)) * H))  ==  ifft(fft(u) * H)
+#
+# for any H, because the two shifts cancel exactly.  The same holds for the
+# 'half' arrangement.  The shifts only exist to present H in a centred
+# convention (and to interoperate with numpy-style code); they cost two full
+# array rolls per propagation -- about 19 ms each for a 4K complex field on a
+# 72-thread CPU, more than the 4K FFT itself.
+#
+# Set `set_fast_shift(True)` to skip them.  The default is False, which keeps
+# bit-identical behaviour for every existing caller.  Equivalence is checked by
+# `benchmarks/verify_equivalence.py --stage asm`.
+# ---------------------------------------------------------------------------
+_FAST_SHIFT = False
+
+
+def set_fast_shift(enabled):
+    """Enable/disable the shift-free ASM fast path (default: disabled)."""
+    global _FAST_SHIFT
+    _FAST_SHIFT = bool(enabled)
+
+
+def fast_shift_enabled():
+    """Current state of the shift-free ASM switch."""
+    return _FAST_SHIFT
+
+
 def _propagation_ASM_core(u_in, feature_size, wavelength, z, linear_conv=True,
                           padtype='zero', return_H=False, precomped_H=None,
                           return_H_exp=False, precomped_H_exp=None,
-                          dtype=torch.float32, shift_mode='full'):
+                          dtype=torch.float32, shift_mode='full', skip_shift=None):
     """Single implementation of ASM propagation.
 
     `shift_mode` selects the fftshift/ifftshift placement:
         'full' : ifftshift before fft, fftshift after ifft  (propagation_ASM)
         'half' : fftshift after fft, ifftshift before ifft  (propagation_ASM1)
         'none' : no shifts                                    (propagation_ASM2)
+    `skip_shift` (None = follow the global switch) drops the shift pair, which
+    is algebraically exact for a fixed filter; see `set_fast_shift`.
     """
+    if skip_shift is None:
+        skip_shift = _FAST_SHIFT
+    skip_shift = bool(skip_shift) and shift_mode != 'none'
     if shift_mode not in ('full', 'half', 'none'):
         raise ValueError("shift_mode must be one of 'full', 'half', 'none'")
 
@@ -191,7 +228,11 @@ def _propagation_ASM_core(u_in, feature_size, wavelength, z, linear_conv=True,
     if return_H:
         return H
 
-    if shift_mode == 'full':
+    if skip_shift:  # exact: circular convolution commutes with circular shift
+        U1 = torch.fft.fftn(u_in, dim=(-2, -1), norm='ortho')
+        U2 = H * U1
+        u_out = torch.fft.ifftn(U2, dim=(-2, -1), norm='ortho')
+    elif shift_mode == 'full':
         U1 = torch.fft.fftn(ifftshift(u_in), dim=(-2, -1), norm='ortho')
         U2 = H * U1
         u_out = fftshift(torch.fft.ifftn(U2, dim=(-2, -1), norm='ortho'))

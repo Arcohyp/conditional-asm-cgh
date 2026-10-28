@@ -1,0 +1,48 @@
+{
+  "device": "cuda",
+  "model": "spatial",
+  "resolution": [
+    1080,
+    1920
+  ],
+  "rows": [
+    {
+      "d_image": 3.5762786865234375e-07,
+      "d_phi": 7.2479248046875e-05,
+      "ms": 13.402099953964353,
+      "passed": true,
+      "psnr_agreement": 143.59223185719577,
+      "psnr_quality": 25.45802089389628,
+      "stage": "conv"
+    },
+    {
+      "d_image": 3.5762786865234375e-07,
+      "d_phi": 7.2479248046875e-05,
+      "ms": 10.725224856287241,
+      "passed": true,
+      "psnr_agreement": 143.43069469792238,
+      "psnr_quality": 25.45802018324507,
+      "stage": "backbone"
+    },
+    {
+      "d_image": 4.76837158203125e-07,
+      "d_phi": 0.00010466575622558594,
+      "ms": 10.451677953824401,
+      "passed": true,
+      "psnr_agreement": 140.91689052197415,
+      "psnr_quality": 25.45802089389628,
+      "stage": "asm"
+    },
+    {
+      "d_image": 4.76837158203125e-07,
+      "d_phi": 0.00010466575622558594,
+      "ms": 10.448908898979425,
+      "passed": true,
+      "psnr_agreement": 140.96842376123283,
+      "psnr_quality": 25.45802018324507,
+      "stage": "mult"
+    }
+  ],
+  "wavelength": 0.000532,
+  "z": 150.0
+}

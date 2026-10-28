@@ -1,0 +1,48 @@
+{
+  "device": "cuda",
+  "model": "uncond",
+  "resolution": [
+    1080,
+    1920
+  ],
+  "rows": [
+    {
+      "d_image": 4.76837158203125e-07,
+      "d_phi": 9.822845458984375e-05,
+      "ms": 7.9556480050086975,
+      "passed": true,
+      "psnr_agreement": 141.22942123968363,
+      "psnr_quality": 25.80221145830915,
+      "stage": "conv"
+    },
+    {
+      "d_image": 4.172325134277344e-07,
+      "d_phi": 7.677078247070312e-05,
+      "ms": 5.265984917059541,
+      "passed": true,
+      "psnr_agreement": 141.34597952893563,
+      "psnr_quality": 25.80221145830915,
+      "stage": "backbone"
+    },
+    {
+      "d_image": 5.960464477539062e-07,
+      "d_phi": 5.4836273193359375e-05,
+      "ms": 5.0549861043691635,
+      "passed": true,
+      "psnr_agreement": 137.666362419214,
+      "psnr_quality": 25.802211842941325,
+      "stage": "asm"
+    },
+    {
+      "d_image": 5.960464477539062e-07,
+      "d_phi": 5.030632019042969e-05,
+      "ms": 5.052460124716163,
+      "passed": true,
+      "psnr_agreement": 137.71105184123388,
+      "psnr_quality": 25.802211842941325,
+      "stage": "mult"
+    }
+  ],
+  "wavelength": 0.000532,
+  "z": 150.0
+}

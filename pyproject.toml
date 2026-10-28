@@ -47,7 +47,18 @@ dev = ["pytest", "black", "flake8"]
 Homepage = "https://github.com/Arcohyp/conditional-asm-cgh"
 Repository = "https://github.com/Arcohyp/conditional-asm-cgh"
 
-[tool.setuptools.packages.find]
-where = ["."]
-include = ["conditional_asm_cgh*"]
-exclude = ["tests*", "experiments*", "eval_results*"]
+# The repository root *is* the package. Map it explicitly so that
+# `pip install -e .` works whichever name the clone directory has
+# (`conditional-asm-cgh` and `conditional_asm_cgh` both resolve).
+[tool.setuptools]
+packages = [
+    "conditional_asm_cgh",
+    "conditional_asm_cgh.models",
+    "conditional_asm_cgh.utils",
+    "conditional_asm_cgh.scripts",
+    "conditional_asm_cgh.scripts.revision",
+    "conditional_asm_cgh.benchmarks",
+]
+
+[tool.setuptools.package-dir]
+conditional_asm_cgh = "." 

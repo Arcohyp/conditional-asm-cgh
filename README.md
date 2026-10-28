@@ -15,6 +15,7 @@ Code and trained weights are linked to the manuscript.
 - **44k parameters**, 0.20 MB checkpoint, 8-bit phase quantization compatible.
 - Three ablation models: unconditional, spatial-conditional (proposed), frequency-conditional.
 - 4K DIV2K validation; PSNR/SSIM evaluation, engineering benchmark, and figure generation scripts included.
+- **Fast inference path** (`benchmarks/`): 2.4–3.1× faster than a stock `complexPyTorch` forward at identical output (46 fps at 4K on one RTX A6000). See [benchmarks/README.md](benchmarks/README.md).
 
 ## First revision (September 2026)
 
@@ -71,6 +72,7 @@ conditional_asm_cgh/
 ├── models/              # Model definitions (unconditional, spatial-conditional, frequency-conditional)
 ├── utils/               # ASM propagation and image loading utilities
 ├── scripts/             # Training, evaluation, figure generation
+├── benchmarks/          # Fast inference path: code, correctness checks, results
 ├── configs/             # Placeholder for training configurations
 ├── figures/             # Generated figures
 ├── requirements.txt
@@ -105,17 +107,28 @@ Train the spatial-conditional model from a warm-started blue baseline:
 
 ```bash
 python -m conditional_asm_cgh.scripts.stage1_train \
-  --data-path /path/to/DIV2K_train \
-  --outdir ./experiments/stage1_blue \
-  --z 150.0 --wavelength 0.000450 --pitch 0.0036 \
+  --train-path /path/to/DIV2K_train_HR \
+  --valid-path /path/to/DIV2K_valid_HR \
+  --base-weight /path/to/blue_baseline.pth \
+  --output-dir ./experiments/stage1_blue \
   --device-id 0
 ```
 
-Then train the full spatial-conditional model:
+Then train the full spatial-conditional model on top of it:
 
 ```bash
-bash scripts/run_colorcond_npcc.sh
+python -m conditional_asm_cgh.scripts.train_colorcond \
+  --base-weight ./experiments/stage1_blue/best_model.pth \
+  --train-path /path/to/DIV2K_train_HR \
+  --valid-path /path/to/DIV2K_valid_HR \
+  --output-dir ./experiments/colorcond \
+  --device-id 0
 ```
+
+Run either module with `--help` for the full flag list (epochs, learning rate,
+number of samples, $z$ range, wavelength list, peak-anchoring probability).
+The shell wrappers used for the paper runs are not part of this snapshot; the
+Python entry points they called are.
 
 ### 3. Evaluation
 
@@ -140,15 +153,42 @@ python -m conditional_asm_cgh.scripts.make_paper_figures_a3 \
 
 ## Reproduction checklist
 
-To reproduce the main results in the paper, run the shell scripts in this order:
+To reproduce the main results in the paper, run these entry points in order:
 
-1. `scripts/run_colorcond_npcc.sh` — train spatial-conditional model.
-2. `scripts/run_ablation_A1_nocond.sh` — train unconditional ablation.
-3. `scripts/run_colorcond_contlambda.sh` — continuous-wavelength variant.
-4. `scripts/run_baseline_quant.sh` — 8-bit/6-bit/4-bit quantization study.
-5. `scripts/bench_engineering.py` — latency and memory benchmark.
+1. `scripts/stage1_train.py` — warm-start the blue baseline.
+2. `scripts/train_colorcond.py` — train the spatial-conditional model (and, with
+   a different head, the frequency-conditional and unconditional ablations).
+3. `scripts/eval.py` — PSNR/SSIM sweep over $(z, \lambda)$.
+4. `scripts/c1_quant_eval.py` — 8-bit / 6-bit / 4-bit quantization study.
+5. `scripts/bench_engineering.py` — latency and peak-memory benchmark.
 
-See `scripts/` for all training and evaluation entry points.
+See `scripts/` for all training and evaluation entry points, and
+`benchmarks/` for the faster execution path.
+
+## Efficient inference
+
+The checkpoints above also run through an optional fast path that fuses the
+complex convolutions, caches the $(z,\lambda)$ frequency multiplier and drops the
+redundant ASM shifts. Same weights, same output — the agreement between the two
+pipelines is 136–141 dB and the PSNR/SSIM difference on DIV2K is 0.00000 dB:
+
+| resolution | reference | fast path | speed-up (RTX A6000) |
+|---|---|---|---|
+| 1280×720 | 10.27 ms | **3.35 ms** | 3.07× |
+| 1920×1080 | 16.05 ms | **6.57 ms** | 2.44× |
+| 2560×1440 | 24.90 ms | **9.69 ms** | 2.57× |
+| 3840×2160 | 55.44 ms | **21.55 ms** | 2.57× |
+
+```python
+from conditional_asm_cgh.utils.fast_infer import FastCGHInference
+
+engine = FastCGHInference(model, n=2160, m=3840, pitch=0.0036,
+                          wavelength=0.000532, z=150.0, device='cuda')
+phase, image = engine.run(amp)
+```
+
+Correctness checks, the mechanism, CPU numbers and reproduction commands are in
+[benchmarks/README.md](benchmarks/README.md).
 
 ## Data
 
@@ -187,8 +227,9 @@ The checkpoints store both `model_state_dict` and training metadata; only `model
 @article{cheng2026conditional,
   title={A lightweight complex-valued U-Net CGH for joint distance--wavelength coverage of the ASM parameter plane},
   author={Cheng, Xirun and Liu, Yong and Sun, Dapeng and Wang, Quan and Zhang, Chaofan and Gao, Zhenyu},
+  journal={Optics Express},
   year={2026},
-  note={Manuscript under review}
+  note={Accepted}
 }
 ```
 
