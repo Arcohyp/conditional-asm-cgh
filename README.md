@@ -1,13 +1,16 @@
 # Conditional-ASM-CGH
 
+[![DOI](https://img.shields.io/badge/DOI-10.1364%2FOE.610780-blue)](https://doi.org/10.1364/OE.610780)
+
 A lightweight, single-weight complex-valued U-Net CGH model conditioned on propagation distance $z$, wavelength $\lambda$, and pixel pitch. The model covers the ASM self-imaging parameter plane with only **44,221 parameters**, replacing the conventional one-model-per-$(z,\lambda)$ pipeline.
 
-This repository accompanies the manuscript:
+This repository accompanies the published paper:
 
-> **A lightweight complex-valued U-Net CGH for joint distance–wavelength coverage of the ASM parameter plane**  
-> Xirun Cheng, Yong Liu, Dapeng Sun, Quan Wang, Chaofan Zhang, Zhenyu Gao
+> **Lightweight complex-valued U-Net CGH for joint distance–wavelength coverage of the ASM parameter plane**  
+> Xirun Cheng, Yong Liu, Dapeng Sun, Quan Wang, Chaofan Zhang, Zhenyu Gao  
+> *Optics Express* **34**(22), 42451–42467 (2026) — [doi:10.1364/OE.610780](https://doi.org/10.1364/OE.610780)
 
-Code and trained weights are linked to the manuscript.
+Code and trained weights are linked to the paper.
 
 ## Highlights
 
@@ -224,12 +227,17 @@ The checkpoints store both `model_state_dict` and training metadata; only `model
 ## Citation
 
 ```bibtex
-@article{cheng2026conditional,
-  title={A lightweight complex-valued U-Net CGH for joint distance--wavelength coverage of the ASM parameter plane},
+@article{cheng2026lightweight,
+  title={Lightweight complex-valued U-Net CGH for joint distance--wavelength coverage of the ASM parameter plane},
   author={Cheng, Xirun and Liu, Yong and Sun, Dapeng and Wang, Quan and Zhang, Chaofan and Gao, Zhenyu},
   journal={Optics Express},
+  volume={34},
+  number={22},
+  pages={42451--42467},
   year={2026},
-  note={Accepted}
+  publisher={Optica Publishing Group},
+  doi={10.1364/OE.610780},
+  url={https://doi.org/10.1364/OE.610780}
 }
 ```
 
