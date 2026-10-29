@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: "Lightweight complex-valued U-Net CGH for joint distance-wavelength coverage of the ASM parameter plane"
+message: "If you use this code or the trained weights, please cite the paper."
+authors:
+  - family-names: Cheng
+    given-names: Xirun
+  - family-names: Liu
+    given-names: Yong
+  - family-names: Sun
+    given-names: Dapeng
+  - family-names: Wang
+    given-names: Quan
+  - family-names: Zhang
+    given-names: Chaofan
+  - family-names: Gao
+    given-names: Zhenyu
+doi: 10.1364/OE.610780
+version: 1.0.0
+date-released: "2026-11-02"
+type: article
+journal:
+  title: Optics Express
+  volume: "34"
+  issue: "22"
+  pages: "42451-42467"
+url: "https://github.com/Arcohyp/conditional-asm-cgh"
